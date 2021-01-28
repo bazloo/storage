@@ -11,5 +11,18 @@ const storage = multer.diskStorage({
 
 });
 
+const upload = multer({
+    storage,
+    limits: {
+        fileSize: 5 * 1024 * 1024
+    },
+    fileFilter: (req, file, cb) => {
 
-module.exports = storage;
+        if (!file.originalname.match(/\.(pdf|doc|png)$/)) {
+            return cb(new Error('Only .pdf, .doc, .png are allowed.'), false);
+        }
+        cb(null, true);
+    }
+});
+
+module.exports = upload;

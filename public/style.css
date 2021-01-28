@@ -6,14 +6,14 @@
 
 h1{
     text-align: center;
-    margin-top: 5vw;
+    margin-top: 4vw;
 }
 .wrapper{
     display: flex;
     flex-direction: column;
     width: 25vw;
     height: fit-content;
-    margin: 5vw auto;
+    margin: 4vw auto;
     border: 2px solid black;
     padding: 2vw;
 }
@@ -29,4 +29,12 @@ input, button {
     margin-top: 1vw;
     width: 20vw;
     height: 2vw;
+}
+.arrow {
+    
+    text-align: center;
+}
+.expl {
+    margin-top: 2vw;
+    font-size: 1.2vw;
 }
