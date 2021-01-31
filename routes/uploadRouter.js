@@ -14,7 +14,8 @@ router
         next();
     });
 
-router.use((req, res,) => {
+router
+    .use((req, res,) => {
 
         const gzip = zlib.createGzip();
         let input = fs.createReadStream('./storage/' + req.file.filename);
